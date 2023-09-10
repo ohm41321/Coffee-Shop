@@ -45,7 +45,7 @@
   Details.date = '';
   Details.time = '';
   Details.tables = '';
-  alert("Please Check Your Booking Details at bottom of page")
+  alert("Booking Complete!!! , Please Check Your Booking Details at The bottom of page")
 }
 
   
@@ -60,23 +60,23 @@
 
 <template>
   <h1 style="color: white ;">Select Your Favorite Restaurant</h1> <br>
-  <div class="container-input" style="background-color: #244c66;">
+  <div class="container-input" style="background-color: #5d7585;">
     <h4 style="color: rgb(245, 0, 0); font-weight: bold;">** กรุณากรอกข้อมูลให้ครบถ้วนก่อนจองโต๊ะ **</h4>
     <div class="cont">
           <div class="text-input">
             Name &nbsp; <input type="text" v-model="Details.name" required> 
           </div>
           <div class="text-input">
-            Tel &nbsp; <input type="text" v-model="Details.tel" required> 
+            Tel &nbsp; <input type="tel" v-model="Details.tel" required> 
           </div>
           <div class="text-input">  
-            DD/MM/YYYY &nbsp; <input type="text" v-model="Details.date" required>
+            DD/MM/YYYY &nbsp; <input type="date" v-model="Details.date" required>
           </div>
           <div class="text-input">
-            Time &nbsp; <input type="text" v-model="Details.time" required>
+            Time &nbsp; <input type="time" v-model="Details.time" required>
           </div>
           <div class="text-input">
-            Tables &nbsp; <input type="text" v-model="Details.tables" required> 
+            Tables &nbsp; <input type="number" v-model="Details.tables" required> 
           </div>
     </div>
   </div>
@@ -100,7 +100,7 @@
     <h4>Details</h4>
     <tr>
       <th scope="col">ชื่อร้าน</th>
-      <th scope="col">ชื่อ</th>
+      <th scope="col">ชื่อผู้จอง</th>
       <th scope="col">เบอร์โทร</th>
       <th scope="col">วัน/เดือน/ปี</th>
       <th scope="col">เวลา</th>
@@ -144,13 +144,18 @@ tbody{
   background-color: red;
 }
 .container-input{
+  border-radius: 30px;
   padding: 10px;
+  margin: 0px 15px;
 }
 .text-input{
   font-size: 18px;
   font-weight: bold;
+  margin: 0px -20px;
 }
 .cont{
+  border-radius: 30px;
+  margin: 0px 18px;
   display: flex;
   padding: 30px;
   justify-content: space-between;
