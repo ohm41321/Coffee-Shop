@@ -97,7 +97,7 @@
   </div> <br>
   <table class="table table-dark table-striped" v-if="bookingList.length > 0">
   <thead>
-    <h4 style="color: white; background-color: rgb(100, 100, 100);">Details</h4>
+    <h4>Details</h4>
     <tr>
       <th scope="col">ชื่อร้าน</th>
       <th scope="col">ชื่อ</th>
@@ -137,6 +137,12 @@
   </div>
 </template>
 <style>
+table{
+  background-color: rgb(0, 0, 0);
+}
+tbody{
+  background-color: red;
+}
 .container-input{
   padding: 10px;
 }
@@ -152,7 +158,7 @@
   background-color: aliceblue;
 }
 body{
-  background-color: #515151;
+  background-color: #053f66;
 }
 .card{
   transition: 300ms;
