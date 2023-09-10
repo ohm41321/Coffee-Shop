@@ -25,6 +25,8 @@
   const bookingList = ref([
   ]);
 
+  
+
   function booking(restaurant, details) {
 
   const bookingData = {
@@ -43,6 +45,7 @@
   Details.date = '';
   Details.time = '';
   Details.tables = '';
+  alert("Please Check Your Booking Details at bottom of page")
 }
 
   
@@ -56,7 +59,7 @@
 </script>
 
 <template>
-  <h1 style="color: black ;">Select Your Favorite Restaurant</h1> <br>
+  <h1 style="color: white ;">Select Your Favorite Restaurant</h1> <br>
   <div class="container-input" style="background-color: #244c66;">
     <h4 style="color: rgb(245, 0, 0); font-weight: bold;">** กรุณากรอกข้อมูลให้ครบถ้วนก่อนจองโต๊ะ **</h4>
     <div class="cont">
@@ -67,7 +70,7 @@
             Tel &nbsp; <input type="text" v-model="Details.tel" required> 
           </div>
           <div class="text-input">  
-            DD/MM/YYYY &nbsp; <input type="text" v-model="Details.date" required> <br>
+            DD/MM/YYYY &nbsp; <input type="text" v-model="Details.date" required>
           </div>
           <div class="text-input">
             Time &nbsp; <input type="text" v-model="Details.time" required>
@@ -76,7 +79,6 @@
             Tables &nbsp; <input type="text" v-model="Details.tables" required> 
           </div>
     </div>
-
   </div>
   <div class="container text-center" style="background-color: ; border-radius: 20px;">
     <div class="row" align="center">
@@ -97,8 +99,7 @@
   <thead>
     <h4 style="color: white; background-color: rgb(100, 100, 100);">Details</h4>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">ร้าน</th>
+      <th scope="col">ชื่อร้าน</th>
       <th scope="col">ชื่อ</th>
       <th scope="col">เบอร์โทร</th>
       <th scope="col">วัน/เดือน/ปี</th>
@@ -108,7 +109,6 @@
   </thead>
   <tbody>
     <tr v-for="(booking, index) in bookingList" :key="index">
-      <th scope="row">{{ index + 1 }}</th>
       <td>{{ booking.restaurantName }}</td>
       <td>{{ booking.name }}</td>
       <td>{{ booking.tel }}</td>
@@ -145,14 +145,14 @@
   font-weight: bold;
 }
 .cont{
-  display:flex;
+  display: flex;
   padding: 30px;
   justify-content: space-between;
   text-align: center;
   background-color: aliceblue;
 }
 body{
-  background-color: #838996;
+  background-color: #515151;
 }
 .card{
   transition: 300ms;
